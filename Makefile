@@ -6,5 +6,11 @@ a.out: $(SRC)
 run: a.out
 	./a.out
 
-cppcheck : $(SRC)
-	cppcheck --enable=all Linked_List -iLinked_List/Unity
+cppcheck :
+	cppcheck --enable=all *.c
+
+valgrind:
+	valgrind ./a.out
+
+clear:
+	clear
