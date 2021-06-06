@@ -3,13 +3,13 @@ SRC: linked_list.c main.c Unity/unity.c
 a.out: $(SRC)
 	gcc $^ -o $@
 
-run: a.out
+test: a.out
 	./a.out
 
-cppcheck :
+analyze: test
 	cppcheck --enable=all *.c
 
-valgrind:
+memory_leak: test
 	valgrind ./a.out
 
 clear:
