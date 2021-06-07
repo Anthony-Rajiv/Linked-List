@@ -14,5 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make
-      run: make run
+      run: make test
+    - name: Cppcheck
+      run: make analyze
+    - name: Valgrind
+      run: make memory_leak
  
