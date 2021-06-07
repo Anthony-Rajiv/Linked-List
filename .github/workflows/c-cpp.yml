@@ -15,9 +15,13 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: make test
-    - name: install cppcheck
+    - name: Install cppcheck
       run: sudo apt-get install cppcheck
     - name: Cppcheck
       run: make analyze
+    - name: Install Valgrind
+      run: sudo apt-get install valgrind
+    - name: Valgrind
+      run: make memory_leak
 
  
