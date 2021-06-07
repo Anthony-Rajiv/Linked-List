@@ -23,5 +23,7 @@ jobs:
       run: sudo apt-get install valgrind
     - name: Valgrind
       run: make memory_leak
+    - name: clean
+      run: make clean
 
  
