@@ -1,3 +1,14 @@
+/**
+ * @file main.c
+ * @author Anthony Rajiv Francis (anthonyrajiv.francis@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-06-07
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include "unity.h"
 #include "linked_list.h"
 struct new_stack* ptr = NULL;
