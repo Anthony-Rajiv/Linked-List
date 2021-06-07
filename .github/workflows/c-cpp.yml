@@ -16,6 +16,7 @@ jobs:
     - name: make
       run: make test
     - name: Cppcheck
-      run: make analyze
+      run: sudo apt-get install cppcheck
+           make analyze
 
  
