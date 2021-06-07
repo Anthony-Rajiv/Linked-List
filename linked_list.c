@@ -3,6 +3,12 @@
 linked_list* head = NULL;
 linked_list* tail = NULL;
 
+/**
+ * @brief Create a linked list object
+ * 
+ * @param data 
+ * @return linked_list_data_type 
+ */
 linked_list_data_type create_linked_list(linked_list_data_type data)
 {
     linked_list* new_node = (linked_list *)malloc(sizeof(linked_list));
@@ -22,7 +28,11 @@ linked_list_data_type create_linked_list(linked_list_data_type data)
     }
     return tail -> data;
 }
-
+/**
+ * @brief Display the elements of Linked List
+ * 
+ * @return linked_list_data_type 
+ */
 linked_list_data_type display()
 {
 
@@ -45,6 +55,12 @@ linked_list_data_type display()
 
 }
 
+/**
+ * @brief 1. Insertion at Head
+ * 
+ * @param data 
+ * @return error_t 
+ */
 error_t push_at_head(linked_list_data_type data)
 {
     linked_list* new_node = (linked_list *) malloc(sizeof(linked_list));
@@ -55,7 +71,13 @@ error_t push_at_head(linked_list_data_type data)
 
     return SUCCESS;
 }
-
+/**
+ * @brief 2. Insertion at a given node
+ * 
+ * @param prev_node 
+ * @param data 
+ * @return error_t 
+ */
 error_t push_after_node(linked_list* prev_node, linked_list_data_type data)
 {
     if (prev_node == NULL)
@@ -71,7 +93,12 @@ error_t push_after_node(linked_list* prev_node, linked_list_data_type data)
 
     return SUCCESS;
 }
-
+/**
+ * @brief 3.Insertion at Tail
+ * 
+ * @param data 
+ * @return error_t 
+ */
 error_t append(linked_list_data_type data)
 {
     linked_list* new_node = (linked_list *) malloc(sizeof(linked_list));
@@ -98,7 +125,11 @@ error_t append(linked_list_data_type data)
     return SUCCESS;
 }
 
-
+/**
+ * @brief Delete Linked List
+ * 
+ * @return error_t 
+ */
 error_t delete_linked_list()
 {
    linked_list* current = head;
